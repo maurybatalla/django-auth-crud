@@ -1,0 +1,40 @@
+<!-- Heredo de base.html-->
+
+{% extends 'base.html' %}
+
+{% block content %}
+<main class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4 mt-5">
+            <form method="POST" class="card card-body text-center">   
+    
+            <h1 class="text-center">Signin</h1>
+            {{error}}
+
+            {% csrf_token %}
+
+            <div class="mb-3">
+                <label for="username">Usuario</label>
+                <input type="text" name="username" id="username" placeholder="Ingrese Usuario" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="password">Contraseña</label>
+                <input type="password" name="password" id="password" placeholder="Ingrese Contraseña" class="form-control">
+            </div>
+
+
+
+            <button class="btn btn-primary" type="submit">
+                Signin
+            </button>
+        </form>
+    </div>
+</div>
+</main>
+
+
+
+
+{% endblock %}
+
